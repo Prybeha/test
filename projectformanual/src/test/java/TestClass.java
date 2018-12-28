@@ -16,9 +16,10 @@ public class TestClass extends SetupClass {
             driver.findElement(By.name("btnK")).submit();
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div[1]/a[1]/h3")));
             driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div[1]/a[1]/h3")).click();
+            Assert.assertEquals(1,2);
             TestResult.TestLinkPass("FirstTestCaseForManual"); // Must be on the last line of try block
         }
-        catch (Exception e){
+        catch (AssertionError e){
             TestResult.TestLinkFail("FirstTestCaseForManual",e.getMessage()); // Send TC name and error message
             throw new NewException("Assertion finished false"); // call error
         }
@@ -28,7 +29,7 @@ public class TestClass extends SetupClass {
     public void secondtest() throws Exception{
         try {
             driver.findElement(By.name("q")).sendKeys("CoinMarketCap");
-            Assert.assertEquals(driver.getCurrentUrl(), "https://www.google.com");
+            Assert.assertEquals(driver.getCurrentUrl(), "https://www.google.com/");
             TestResult.TestLinkPass("SecondTestCaseForManual");
         }
         catch (AssertionError e){

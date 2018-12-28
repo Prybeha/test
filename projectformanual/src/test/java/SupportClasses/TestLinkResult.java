@@ -1,5 +1,6 @@
 package SupportClasses;
 
+import org.apache.log4j.Logger;
 import testlink.api.java.client.TestLinkAPIClient;
 import testlink.api.java.client.TestLinkAPIException;
 import testlink.api.java.client.TestLinkAPIResults;
@@ -10,6 +11,7 @@ public class TestLinkResult {
     private String Project_NAME = "ProjectForManual";
     private String Plan_NAME = "TestPlanForManual";
     private String Build_NAME = "BuildForManual";
+    private static final Logger log = Logger.getLogger(TestLinkResult.class);
 
     private String result = null;
     private String exception = null;
@@ -17,11 +19,13 @@ public class TestLinkResult {
     public void TestLinkFail(String TestCaseName, String e) throws Exception{
         result = TestLinkAPIResults.TEST_FAILED;
         exception = e;
+        log.error("Test case " + TestCaseName + " failed!");
         updateTestLinkResult(TestCaseName, exception, result);
     }
 
     public void TestLinkPass(String TestCaseName) throws Exception{
         result = TestLinkAPIResults.TEST_PASSED;
+        log.debug("Test case " + TestCaseName + "  passed");
         updateTestLinkResult(TestCaseName, exception, result);
     }
 
