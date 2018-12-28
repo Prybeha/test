@@ -5,10 +5,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import org.testng.Assert;
+import ru.yandex.qatools.allure.annotations.Severity;
+import ru.yandex.qatools.allure.annotations.TestCaseId;
+import ru.yandex.qatools.allure.annotations.Title;
+import ru.yandex.qatools.allure.model.SeverityLevel;
 
 public class TestClass extends SetupClass {
     TestLinkResult TestResult = new TestLinkResult();
 
+    @Title("FirstTest")
+    @Severity(SeverityLevel.NORMAL)
+    @TestCaseId("1")
     @Test
     public void firsttest() throws Exception{
         try {
@@ -25,6 +32,9 @@ public class TestClass extends SetupClass {
         }
     }
 
+    @Title("SecondTest")
+    @Severity(SeverityLevel.CRITICAL)
+    @TestCaseId("2")
     @Test
     public void secondtest() throws Exception{
         try {
