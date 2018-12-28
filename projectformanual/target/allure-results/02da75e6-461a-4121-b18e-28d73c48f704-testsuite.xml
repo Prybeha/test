@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1546001562198" stop="1546001595096" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Surefire suite : Surefire test</name>
+    <title>Surefire suite : Surefire test</title>
+    <test-cases>
+        <test-case start="1546001568935" stop="1546001585157" status="passed">
+            <name>firsttest</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Surefire suite"/>
+                <label name="testGroup" value="Surefire test"/>
+                <label name="testClass" value="TestClass"/>
+                <label name="testMethod" value="firsttest"/>
+                <label name="host" value="vprybeha-w7"/>
+                <label name="thread" value="6844@vprybeha-w7.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1546001590957" stop="1546001594282" status="passed">
+            <name>secondtest</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Surefire suite"/>
+                <label name="testGroup" value="Surefire test"/>
+                <label name="testClass" value="TestClass"/>
+                <label name="testMethod" value="secondtest"/>
+                <label name="host" value="vprybeha-w7"/>
+                <label name="thread" value="6844@vprybeha-w7.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
