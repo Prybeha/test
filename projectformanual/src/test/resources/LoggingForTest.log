@@ -2,3 +2,7 @@
 2018-12-28 15:51:34 ERROR TestLinkResult:22 - Test failed!
 2018-12-28 16:05:13 ERROR TestLinkResult:22 - Test case FirstTestCaseForManual failed!
 2018-12-28 16:05:25 DEBUG TestLinkResult:28 - Test case SecondTestCaseForManual  passed
+2018-12-28 16:15:36 ERROR TestLinkResult:22 - Test case FirstTestCaseForManual failed!
+2018-12-28 16:15:49 DEBUG TestLinkResult:28 - Test case SecondTestCaseForManual  passed
+2018-12-28 16:38:23 ERROR TestLinkResult:22 - Test case FirstTestCaseForManual failed!
+2018-12-28 16:38:36 DEBUG TestLinkResult:28 - Test case SecondTestCaseForManual  passed

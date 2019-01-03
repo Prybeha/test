@@ -41,6 +41,7 @@
             <version>1.8.0-beta2</version>
             <scope>test</scope>
         </dependency>
+        <!-- dependencies for using testlink -->
         <dependency>
             <groupId>com.testlink.client</groupId>
             <artifactId>testlink-api-client</artifactId>
@@ -61,6 +62,7 @@
             <artifactId>xmlrpc-common</artifactId>
             <version>3.1</version>
         </dependency>
+        <!-- add log dependency -->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -88,6 +90,31 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.0.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                    <executions>
+                        <execution>
+                            <id>copy-resources</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>copy-resources</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>target/allure-results</outputDirectory>
+                                <resources>
+                                    <resource>
+                                        <directory>src/test/resources</directory>
+                                        <includes>
+                                            <include>environment.properties</include>
+                                            <include>categories.json</include>
+                                        </includes>
+                                    </resource>
+                                </resources>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
