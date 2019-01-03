@@ -1,5 +1,5 @@
-SupportClasses\NewException.class
 SupportClasses\TestLinkResult.class
 TestClass.class
 SupportClasses\LogUtil.class
 SupportClasses\SetupClass.class
+SupportClasses\NewException.class

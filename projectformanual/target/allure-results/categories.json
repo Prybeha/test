@@ -6,10 +6,11 @@
 {
   "name": "Test defects",
   "matchedStatuses": ["broken"]
-},
-{
-  "name": "Vovas test exception",
-  "matchedStatuses": ["broken"],
-  "traceRegex": ".*NewException.*"
 }
+,
+  {
+    "name": "Outdated tests",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*NewException.*"
+  }
 ]

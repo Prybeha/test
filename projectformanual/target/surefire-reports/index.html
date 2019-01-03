@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Surefire_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="TestClass" hash-for-method="secondtest">secondtest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="TestClass" hash-for-method="firsttest">firsttest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Surefire_suite -->
@@ -116,7 +116,7 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="TestClass" hash-for-method="firsttest">firsttest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="TestClass" hash-for-method="secondtest">secondtest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -139,11 +139,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="secondtest">
-                  </a> <!-- secondtest -->
-                  <span class="method-name">secondtest</span>
+                  <a name="firsttest">
+                  </a> <!-- firsttest -->
+                  <span class="method-name">firsttest</span>
                   <div class="stack-trace">SupportClasses.NewException: Assertion finished false
-	at TestClass.secondtest(TestClass.java:36)
+	at TestClass.firsttest(TestClass.java:31)
 ... Removed 30 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -158,9 +158,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="firsttest">
-                  </a> <!-- firsttest -->
-                  <span class="method-name">firsttest</span>
+                  <a name="secondtest">
+                  </a> <!-- secondtest -->
+                  <span class="method-name">secondtest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -221,16 +221,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'firsttest')
 data.setCell(0, 2, 'TestClass')
-data.setCell(0, 3, 39395);
+data.setCell(0, 3, 32713);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'secondtest')
 data.setCell(1, 2, 'TestClass')
-data.setCell(1, 3, 3205);
+data.setCell(1, 3, 3665);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 42 seconds</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -262,26 +262,26 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">firsttest</span>
-                <span class="method-start">7890 ms</span>
+                <span class="method-start">7678 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">47303 ms</span>
+                <span class="method-start">40410 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">48502 ms</span>
+                <span class="method-start">42154 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">secondtest</span>
-                <span class="method-start">53269 ms</span>
+                <span class="method-start">47277 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">56504 ms</span>
+                <span class="method-start">50945 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
