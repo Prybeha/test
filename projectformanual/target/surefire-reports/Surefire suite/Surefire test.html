@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jan 03 15:01:28 EET 2019</td>
+<td>Started on:</td><td>Thu Jan 03 17:28:24 EET 2019</td>
 </tr>
-<tr><td>Total time:</td><td>52 seconds (52205 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19993 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,11 +76,11 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='TestClass.firsttest()'><b>firsttest</b><br>Test class: TestClass</td>
-<td><div><pre>SupportClasses.NewException: Assertion finished false
-	at TestClass.firsttest(TestClass.java:31)
+<td><div><pre>SupportClasses.NewAssertError: Assertion error with message: expected [2] but found [1]
+	at TestClass.firsttest(TestClass.java:32)
 ... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1176968662", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1176968662'><pre>SupportClasses.NewException: Assertion finished false
-	at TestClass.firsttest(TestClass.java:31)
+<div class='stack-trace' id='stack-trace1176968662'><pre>SupportClasses.NewAssertError: Assertion error with message: expected [2] but found [1]
+	at TestClass.firsttest(TestClass.java:32)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,20 +112,7 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 </pre></div></td>
-<td>32</td>
-<td>TestClass@5ce81285</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='TestClass.secondtest()'><b>secondtest</b><br>Test class: TestClass</td>
-<td></td>
-<td>3</td>
+<td>10</td>
 <td>TestClass@5ce81285</td></tr>
 </table><p>
 </body>

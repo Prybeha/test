@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 53.571 s <<< FAILURE! - in TestSuite
-firsttest(TestClass)  Time elapsed: 32.673 s  <<< FAILURE!
-SupportClasses.NewException: Assertion finished false
-	at TestClass.firsttest(TestClass.java:31)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 21.274 s <<< FAILURE! - in TestSuite
+firsttest(TestClass)  Time elapsed: 10.8 s  <<< FAILURE!
+SupportClasses.NewAssertError: Assertion error with message: expected [2] but found [1]
+	at TestClass.firsttest(TestClass.java:32)
 

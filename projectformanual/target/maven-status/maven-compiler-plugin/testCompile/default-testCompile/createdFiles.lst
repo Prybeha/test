@@ -1,5 +1,7 @@
 SupportClasses\TestLinkResult.class
 TestClass.class
 SupportClasses\LogUtil.class
+SupportClasses\NewAssertError.class
+FirstTestDescription.class
 SupportClasses\SetupClass.class
 SupportClasses\NewException.class

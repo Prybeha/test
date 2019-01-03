@@ -1,3 +1,4 @@
+import SupportClasses.NewAssertError;
 import SupportClasses.NewException;
 import SupportClasses.SetupClass;
 import SupportClasses.TestLinkResult;
@@ -28,7 +29,11 @@ public class TestClass extends SetupClass {
         }
         catch (AssertionError e){
             TestResult.TestLinkFail("FirstTestCaseForManual",e.getMessage()); // Send TC name and error message
-            throw new NewException("Assertion finished false"); // call error
+            throw new NewAssertError("Assertion error with message: " + e.getMessage()); // call error
+        }
+        catch (Exception e){
+            TestResult.TestLinkFail("FirstTestCaseForManual",e.getMessage()); // Send TC name and error message
+            throw new NewException("Exception error with message: " + e.getMessage()); // call error
         }
     }
 

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:test-suite start="1546520488825" stop="1546520541066" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+<ns2:test-suite start="1546529304219" stop="1546529324269" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
     <name>Surefire suite : Surefire test</name>
     <title>Surefire suite : Surefire test</title>
     <test-cases>
-        <test-case start="1546520496588" stop="1546520529258" status="broken">
+        <test-case start="1546529310036" stop="1546529320827" status="failed">
             <name>firsttest</name>
             <title>FirstTest</title>
             <failure>
-                <message>NewException: Assertion finished false</message>
-                <stack-trace>SupportClasses.NewException: Assertion finished false
-	at TestClass.firsttest(TestClass.java:31)
+                <message>NewAssertError: Assertion error with message: expected [2] but found [1]</message>
+                <stack-trace>SupportClasses.NewAssertError: Assertion error with message: expected [2] but found [1]
+	at TestClass.firsttest(TestClass.java:32)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,22 +51,7 @@
                 <label name="testMethod" value="firsttest"/>
                 <label name="severity" value="normal"/>
                 <label name="host" value="vprybeha-w7"/>
-                <label name="thread" value="2716@vprybeha-w7.main(1)"/>
-            </labels>
-        </test-case>
-        <test-case start="1546520536138" stop="1546520539800" status="passed">
-            <name>secondtest</name>
-            <title>SecondTest</title>
-            <steps/>
-            <attachments/>
-            <labels>
-                <label name="testSuite" value="Surefire suite"/>
-                <label name="testGroup" value="Surefire test"/>
-                <label name="testClass" value="TestClass"/>
-                <label name="testMethod" value="secondtest"/>
-                <label name="severity" value="critical"/>
-                <label name="host" value="vprybeha-w7"/>
-                <label name="thread" value="2716@vprybeha-w7.main(1)"/>
+                <label name="thread" value="464@vprybeha-w7.main(1)"/>
             </labels>
         </test-case>
     </test-cases>
