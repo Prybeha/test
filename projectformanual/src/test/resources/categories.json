@@ -4,12 +4,17 @@
   "matchedStatuses": ["failed"]
 },
 {
-  "name": "Test defects",
+  "name": "Broken tests",
   "matchedStatuses": ["broken"]
 },
 {
   "name": "Vovas test exception",
   "matchedStatuses": ["broken"],
   "traceRegex": ".*NewException.*"
+},
+{
+  "name": "Infrastructure problems",
+  "matchedStatuses": ["broken", "failed"],
+  "messageRegex": ".*Assertion finished false.*"
 }
 ]
