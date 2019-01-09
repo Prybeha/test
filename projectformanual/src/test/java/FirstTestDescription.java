@@ -8,6 +8,10 @@ public class FirstTestDescription extends TestClass {
         driver.findElement(By.name("btnK")).submit();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div[1]/a[1]/h3")));
         driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div[1]/a[1]/h3")).click();
+
         Assert.assertEquals(1, 2);
+
+
+
     }
 }
