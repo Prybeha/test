@@ -26,12 +26,6 @@ public class TestClass extends SetupClass {
             Assert.assertEquals(1,2);
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             TestResult.TestLinkPass("FirstTestCaseForManual"); // Must be on the last line of try block
-//            $a->FirstTestMainPart();
-//            $a->test2();
-
-
-
-            
         }
         catch (AssertionError e){
             TestResult.TestLinkFail("FirstTestCaseForManual",e.getMessage()); // Send TC name and error message

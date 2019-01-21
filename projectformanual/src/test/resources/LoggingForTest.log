@@ -19,3 +19,5 @@
 2019-01-03 17:28:31 ERROR TestLinkResult:22 - Test case FirstTestCaseForManual failed!
 2019-01-03 17:30:57 ERROR TestLinkResult:22 - Test case FirstTestCaseForManual failed!
 2019-01-03 17:31:08 DEBUG TestLinkResult:28 - Test case SecondTestCaseForManual  passed
+2019-01-16 15:04:00 DEBUG TestLinkResult:29 - Test case FirstTestCaseForManual  passed
+2019-01-16 15:04:09 ERROR TestLinkResult:23 - Test case SecondTestCaseForManual failed!
