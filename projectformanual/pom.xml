@@ -44,7 +44,7 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.9.2</version>
+            <version>${aspectj.version}</version>
         </dependency>
         <!-- dependencies for using testlink -->
         <dependency>
@@ -91,7 +91,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M1</version>
                     <configuration>
-                        <argLine>-javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-1.9.2.jar
+                        <argLine>-javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
                         </argLine>
                         <suiteXmlFiles>
                             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
