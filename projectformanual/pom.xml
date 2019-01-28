@@ -79,6 +79,9 @@
                     <version>3.0.0-M1</version>
                     <configuration>
                         <testFailureIgnore>false</testFailureIgnore>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                        </suiteXmlFiles>
                     </configuration>
                 </plugin>
                 <plugin>
