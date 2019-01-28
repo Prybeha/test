@@ -91,16 +91,18 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M1</version>
                     <configuration>
-                        <testFailureIgnore>false</testFailureIgnore>
+                        <argLine>-javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-1.9.2.jar
+                        </argLine>
                         <suiteXmlFiles>
                             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
-                        <properties>
-                            <property>
-                                <name>listener</name>
-                                <value>ru.yandex.qatools.allure.testng.AllureTestListener</value>
-                            </property>
-                        </properties>
+                        <!--<properties>-->
+                            <!--<property>-->
+                                <!--<name>listener</name>-->
+                                <!--<value>ru.yandex.qatools.allure.testng.AllureTestListener</value>-->
+                            <!--</property>-->
+                        <!--</properties>-->
+                        <testFailureIgnore>false</testFailureIgnore>
                     </configuration>
                 </plugin>
                 <plugin>
