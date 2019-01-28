@@ -41,6 +41,11 @@
             <version>1.8.0-beta2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.2</version>
+        </dependency>
         <!-- dependencies for using testlink -->
         <dependency>
             <groupId>com.testlink.client</groupId>
@@ -69,6 +74,7 @@
             <version>1.2.17</version>
         </dependency>
     </dependencies>
+    
 
     <build>
         <pluginManagement>
