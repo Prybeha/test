@@ -82,6 +82,12 @@
                         <suiteXmlFiles>
                             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
+                        <properties>
+                            <property>
+                                <name>listener</name>
+                                <value>ru.yandex.qatools.allure.testng.AllureTestListener</value>
+                            </property>
+                        </properties>
                     </configuration>
                 </plugin>
                 <plugin>

@@ -15,14 +15,14 @@
             <class name="UnitClassSet.Investment.test_IndividualnoUS">
                 <methods>
                     <!--<include name="Investment_ACH"/>-->
-                    <include name="Investment_Wire"/>
+                    <!--<include name="Investment_Wire"/>-->
                     <!--<include name="Investment_Bitcoin"/>-->
                     <!--<include name="Investment_Ethereum"/>-->
                 </methods>
             </class>
             <class name="UnitClassSet.Investment.test_IndividualUSnoAccredited">
                 <methods>
-                    <include name="Investment_ACH"/>
+                    <!--<include name="Investment_ACH"/>-->
                     <!--<include name="Investment_Wire"/>-->
                     <!--<include name="Investment_Bitcoin"/>-->
                     <!--<include name="Investment_Ethereum"/>-->
@@ -32,7 +32,7 @@
                 <methods>
                     <!--<include name="Investment_ACH"/>-->
                     <!--<include name="Investment_Wire"/>-->
-                    <include name="Investment_Bitcoin"/>
+                    <!--<include name="Investment_Bitcoin"/>-->
                     <!--<include name="Investment_Ethereum"/>-->
                 </methods>
             </class>
@@ -41,7 +41,7 @@
                     <!--<include name="Investment_ACH"/>-->
                     <!--<include name="Investment_Wire"/>-->
                     <!--<include name="Investment_Bitcoin"/>-->
-                    <include name="Investment_Ethereum"/>
+                    <!--<include name="Investment_Ethereum"/>-->
                 </methods>
             </class>
         </classes>
