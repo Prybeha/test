@@ -1,10 +1,15 @@
 package SupportClasses.SetupClass;
 
+import SupportClasses.AllureFunc.ScreenShot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.ScreenshotException;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class SetupClass {
@@ -26,7 +31,15 @@ public class SetupClass {
     }
 
     @AfterMethod
-    public void teardown(){
+    public void teardown(ITestResult result){
+        if (!result.isSuccess()) {
+            try {
+                ScreenShot screenshot = new ScreenShot();
+                screenshot.makeScreenshot(driver);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         driver.quit();
     }
 }

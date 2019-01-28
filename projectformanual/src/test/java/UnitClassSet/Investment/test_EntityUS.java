@@ -12,7 +12,6 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 
 public class test_EntityUS extends SetupClass {
     private String EntityUS = "prybehav+176@gmail.com";
-    private LogUtil logger = new LogUtil();
 
     @Title("Test Entity US investment process for ACH method")
     @Severity(SeverityLevel.CRITICAL)
@@ -25,17 +24,17 @@ public class test_EntityUS extends SetupClass {
 
         Maintenance maintenance = new Maintenance();
         if (maintenance.MaintenancePageCheck()){
-            logger.log("Maintenance mode is on!");
+            LogUtil.log("Maintenance mode is on!");
             return;
         }
 
         Login L = new Login();
         L.LoginTest(EntityUS);
-        logger.log("Login");
+        LogUtil.log("Login");
 
         AccountType acc_type_obj = new AccountType();
         int acc_type = acc_type_obj.AccountTypeCheck();
-        logger.log("Type is: " + acc_type);
+        LogUtil.log("Type is: " + acc_type);
 
         Investment TestInvestment = new Investment();
         TestInvestment.Investment(acc_type,"ACH","100");
@@ -52,17 +51,17 @@ public class test_EntityUS extends SetupClass {
 
         Maintenance maintenance = new Maintenance();
         if (maintenance.MaintenancePageCheck()){
-            logger.log("Maintenance mode is on!");
+            LogUtil.log("Maintenance mode is on!");
             return;
         }
 
         Login L = new Login();
         L.LoginTest(EntityUS);
-        logger.log("Login");
+        LogUtil.log("Login");
 
         AccountType acc_type_obj = new AccountType();
         int acc_type = acc_type_obj.AccountTypeCheck();
-        logger.log("Type is: " + acc_type);
+        LogUtil.log("Type is: " + acc_type);
 
         Investment TestInvestment = new Investment();
         TestInvestment.Investment(acc_type,"Wire","100");
@@ -79,17 +78,17 @@ public class test_EntityUS extends SetupClass {
 
         Maintenance maintenance = new Maintenance();
         if (maintenance.MaintenancePageCheck()){
-            logger.log("Maintenance mode is on!");
+            LogUtil.log("Maintenance mode is on!");
             return;
         }
 
         Login L = new Login();
         L.LoginTest(EntityUS);
-        logger.log("Login");
+        LogUtil.log("Login");
 
         AccountType acc_type_obj = new AccountType();
         int acc_type = acc_type_obj.AccountTypeCheck();
-        logger.log("Type is: " + acc_type);
+        LogUtil.log("Type is: " + acc_type);
 
         Investment TestInvestment = new Investment();
         TestInvestment.Investment(acc_type,"Bitcoin","0.5");
@@ -106,17 +105,17 @@ public class test_EntityUS extends SetupClass {
 
         Maintenance maintenance = new Maintenance();
         if (maintenance.MaintenancePageCheck()){
-            logger.log("Maintenance mode is on!");
+            LogUtil.log("Maintenance mode is on!");
             return;
         }
 
         Login L = new Login();
         L.LoginTest(EntityUS);
-        logger.log("Login");
+        LogUtil.log("Login");
 
         AccountType acc_type_obj = new AccountType();
         int acc_type = acc_type_obj.AccountTypeCheck();
-        logger.log("Type is: " + acc_type);
+        LogUtil.log("Type is: " + acc_type);
 
         Investment TestInvestment = new Investment();
         TestInvestment.Investment(acc_type,"Ethereum","0.5");

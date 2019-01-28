@@ -8,12 +8,12 @@ import UnitClassSet.Switchers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Investment extends SetupClass {
     private Field field = new Field();
     private Switchers switcher = new Switchers();
     private PagesURL URL = new PagesURL();
-    private LogUtil logger = new LogUtil();
     public void Investment(int user_type, String payment_method, String value_invest) throws Exception{
         URL.DealPage();
 
@@ -23,7 +23,7 @@ public class Investment extends SetupClass {
 
         if (field.ExistElementOnThePage("//div[@class='detail-page-protected denied']",3)){
             System.out.println("This user type does not have access for invest in this deal!");
-            logger.log("This user type does not have access for invest in this deal!");
+            LogUtil.log("This user type does not have access for invest in this deal!");
             return;
         }
 
@@ -31,7 +31,7 @@ public class Investment extends SetupClass {
         InvestButton.click();
 
         int current_step = 0;
-        logger.log("Investment starts");
+        LogUtil.log("Investment starts");
         while (current_step != 4) {
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class='footer-logo']")));
             Thread.sleep(1000);
@@ -40,30 +40,30 @@ public class Investment extends SetupClass {
                 current_step = 1;
 
                 System.out.println("First step");
-                logger.log("First step");
+                LogUtil.log("First step");
                 FirstStep(user_type);
             }
             else if(CheckInvestmentStep(current_step) == 2){
                 current_step = 2;
 
                 System.out.println("Second step");
-                logger.log("Second step");
+                LogUtil.log("Second step");
                 SecondStep(payment_method,value_invest);
             }
             else if(CheckInvestmentStep(current_step) == 3){
                 current_step = 3;
 
                 System.out.println("Third step");
-                logger.log("Third step");
+                LogUtil.log("Third step");
                 ThirdStep();
             }
             else if(CheckInvestmentStep(current_step) == 4){
                 current_step = 4;
 
                 System.out.println("Fourth step");
-                logger.log("Fourth step");
+                LogUtil.log("Fourth step");
                 if (field.ExistElementOnThePage("//h3[text()='Congratulations, your investment is in!']",10)){
-                    logger.log("Investment was successfully done.");
+                    LogUtil.log("Investment was successfully done.");
                     System.out.println("Investment was successfully done.");
                 }
 
@@ -178,6 +178,7 @@ public class Investment extends SetupClass {
         driver.findElement(By.xpath("//input[@class='type-pad ember-text-field ember-view']")).sendKeys("TestUser");
 
         driver.findElement(By.xpath("//button[@class='rs-button is-primary ember-view']")).click();
+        Thread.sleep(500);
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Submit Signature']")));
         driver.findElement(By.xpath("//div[text()='Submit Signature']")).click();
@@ -190,9 +191,12 @@ public class Investment extends SetupClass {
         wait.until(ExpectedConditions.elementToBeClickable(By.id("next")));
         driver.findElement(By.id("next")).click();
 
-        if (field.ExistElementOnThePage("//*[@class='margin-bottom-25 investing-form-error alert alert-danger']",5)){
-            driver.findElement(By.id("next")).click(); // if section work that means incorrect behavior
-            System.out.println("Appears error on the third step!");
-        }
+//        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
+//        if (field.ExistElementOnThePage("//*[@class='margin-bottom-25 investing-form-error alert alert-danger']",5)){
+//            driver.switchTo().defaultContent();
+//            driver.findElement(By.id("next")).click(); // if section work that means incorrect behavior
+//            System.out.println("Appears error on the third step!");
+//        }
+//        driver.switchTo().defaultContent();
     }
 }
