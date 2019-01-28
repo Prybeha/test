@@ -7,40 +7,40 @@
             <class name="UnitClassSet.Investment.test_IndividualUS">
                 <methods>
                     <include name="Investment_ACH"/>
-                    <include name="Investment_Wire"/>
-                    <include name="Investment_Bitcoin"/>
-                    <include name="Investment_Ethereum"/>
+                    <!--<include name="Investment_Wire"/>-->
+                    <!--<include name="Investment_Bitcoin"/>-->
+                    <!--<include name="Investment_Ethereum"/>-->
                 </methods>
             </class>
             <class name="UnitClassSet.Investment.test_IndividualnoUS">
                 <methods>
-                    <include name="Investment_ACH"/>
+                    <!--<include name="Investment_ACH"/>-->
                     <include name="Investment_Wire"/>
-                    <include name="Investment_Bitcoin"/>
-                    <include name="Investment_Ethereum"/>
+                    <!--<include name="Investment_Bitcoin"/>-->
+                    <!--<include name="Investment_Ethereum"/>-->
                 </methods>
             </class>
             <class name="UnitClassSet.Investment.test_IndividualUSnoAccredited">
                 <methods>
                     <include name="Investment_ACH"/>
-                    <include name="Investment_Wire"/>
-                    <include name="Investment_Bitcoin"/>
-                    <include name="Investment_Ethereum"/>
+                    <!--<include name="Investment_Wire"/>-->
+                    <!--<include name="Investment_Bitcoin"/>-->
+                    <!--<include name="Investment_Ethereum"/>-->
                 </methods>
             </class>
             <class name="UnitClassSet.Investment.test_EntityUS">
                 <methods>
-                    <include name="Investment_ACH"/>
-                    <include name="Investment_Wire"/>
+                    <!--<include name="Investment_ACH"/>-->
+                    <!--<include name="Investment_Wire"/>-->
                     <include name="Investment_Bitcoin"/>
-                    <include name="Investment_Ethereum"/>
+                    <!--<include name="Investment_Ethereum"/>-->
                 </methods>
             </class>
             <class name="UnitClassSet.Investment.test_EntitynoUS">
                 <methods>
-                    <include name="Investment_ACH"/>
-                    <include name="Investment_Wire"/>
-                    <include name="Investment_Bitcoin"/>
+                    <!--<include name="Investment_ACH"/>-->
+                    <!--<include name="Investment_Wire"/>-->
+                    <!--<include name="Investment_Bitcoin"/>-->
                     <include name="Investment_Ethereum"/>
                 </methods>
             </class>
