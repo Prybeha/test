@@ -1,6 +1,7 @@
 package UnitClassSet.Investment;
 
 import SupportClasses.AllureFunc.LogUtil;
+import SupportClasses.AllureFunc.ScreenShot;
 import SupportClasses.SetupClass.SetupClass;
 import UnitClassSet.AccountType;
 import UnitClassSet.Investment.Investment;
@@ -26,6 +27,8 @@ public class test_IndividualUS extends SetupClass{
     public void Investment_ACH() throws Exception{
         PagesURL URL = new PagesURL();
         URL.LoginPage();
+        ScreenShot ss = new ScreenShot();
+        ss.makeAttach();
         Assert.assertEquals(1,2);
 
         Maintenance maintenance = new Maintenance();
