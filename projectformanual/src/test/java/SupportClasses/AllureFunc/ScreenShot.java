@@ -6,8 +6,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import ru.yandex.qatools.allure.annotations.Attachment;
 
-public class ScreenShot extends SetupClass {
+public final class ScreenShot extends SetupClass {
     @Attachment(value = "Page screenshot", type = "image/png")
-    public byte[] saveAllureScreenshot()
+    public static byte[] saveAllureScreenshot()
     { return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES); }
 }

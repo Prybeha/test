@@ -49,8 +49,7 @@ public class SetupClass {
 //
 //            byte[] fileContent = Files.readAllBytes(screenshot.toPath());
 
-            ScreenShot ss = new ScreenShot();
-            ss.saveAllureScreenshot();
+            ScreenShot.saveAllureScreenshot();
         }
         driver.quit();
     }
