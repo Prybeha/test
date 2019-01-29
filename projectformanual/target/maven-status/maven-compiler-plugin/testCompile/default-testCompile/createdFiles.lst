@@ -1,6 +1,6 @@
+SupportClasses\AllureFunc\ScreenShotUtil.class
 UnitClassSet\Investment\test_EntitynoUS.class
 UnitClassSet\Investment\test_EntityUS.class
-SupportClasses\AllureFunc\ScreenShot.class
 SupportClasses\AllureFunc\LogUtil.class
 SupportClasses\SetupClass\SetupClass.class
 UnitClassSet\Investment\test_IndividualUS.class

@@ -9,10 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,12 +23,6 @@ public class SetupClass {
 
     public static WebDriver GetDriver(){
         return driver;
-    }
-
-    @BeforeSuite
-    private void CreateFolderForScreenshots(){
-        File dir = new File("./target/allure-results/screenshots/");
-        dir.mkdir();
     }
 
     @BeforeMethod
@@ -48,7 +39,7 @@ public class SetupClass {
     public void teardown(ITestResult result, Method test_name) throws IOException{
         if (result.getStatus()==ITestResult.FAILURE ) {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            String path = "./target/allure-results/screenshots/" + test_name.getName();
+            String path = "./target/allure-results/" + test_name.getName();
             FileHandler.copy(screenshot, new File(path));
         }
         driver.quit();
