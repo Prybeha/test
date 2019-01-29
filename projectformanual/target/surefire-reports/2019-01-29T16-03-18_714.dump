@@ -1,4 +1,4 @@
-# Created at 2019-01-29T15:47:08.825
+# Created at 2019-01-29T16:03:19.613
 Boot Manifest-JAR contains absolute paths in classpath D:\Users\vprybeha\Programs\projectformanual\target\test-classes
 java.lang.IllegalArgumentException: 'other' has different root
 	at sun.nio.fs.WindowsPath.relativize(WindowsPath.java:392)
@@ -38,7 +38,7 @@ java.lang.IllegalArgumentException: 'other' has different root
 	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
 
 
-# Created at 2019-01-29T15:47:08.884
+# Created at 2019-01-29T16:03:19.631
 Boot Manifest-JAR contains absolute paths in classpath D:\Users\vprybeha\Programs\projectformanual\target\classes
 java.lang.IllegalArgumentException: 'other' has different root
 	at sun.nio.fs.WindowsPath.relativize(WindowsPath.java:392)

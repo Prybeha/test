@@ -8,7 +8,6 @@ import ru.yandex.qatools.allure.annotations.Attachment;
 
 public class ScreenShot extends SetupClass {
     @Attachment(value = "Page screenshot", type = "image/png")
-    public byte[] makeScreenshot(byte[] screenShot) {
-        return screenShot;
-    }
+    public byte[] saveAllureScreenshot()
+    { return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES); }
 }

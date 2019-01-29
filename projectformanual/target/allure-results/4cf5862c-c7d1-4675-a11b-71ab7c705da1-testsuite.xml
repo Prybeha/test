@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:test-suite start="1548769632579" stop="1548769646150" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+<ns2:test-suite start="1548770604325" stop="1548770619354" version="1.5.4" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
     <name>Sone tests : Investments</name>
     <title>Sone tests : Investments</title>
     <test-cases>
-        <test-case start="1548769640207" stop="1548769643492" status="failed">
+        <test-case start="1548770613686" stop="1548770616884" status="failed">
             <name>Investment_ACH</name>
             <title>Test Individual US investment process for ACH method</title>
             <description type="text">Login &gt; check account type &gt; make ACH investment</description>
@@ -44,7 +44,7 @@
                 <label name="feature" value="Individual US"/>
                 <label name="feature" value="ACH"/>
                 <label name="host" value="vprybeha-w7"/>
-                <label name="thread" value="2264@vprybeha-w7.TestNG-test=Investments-1(14)"/>
+                <label name="thread" value="2684@vprybeha-w7.TestNG-test=Investments-1(14)"/>
             </labels>
         </test-case>
     </test-cases>

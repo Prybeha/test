@@ -50,7 +50,7 @@ public class SetupClass {
             byte[] fileContent = Files.readAllBytes(screenshot.toPath());
 
             ScreenShot ss = new ScreenShot();
-            ss.makeScreenshot(fileContent);
+            ss.saveAllureScreenshot();
         }
         driver.quit();
     }
