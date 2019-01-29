@@ -14,7 +14,7 @@ import ru.yandex.qatools.allure.annotations.Title;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 
 public class test_IndividualUSnoAccredited extends SetupClass {
-    private String IndividualUSNoAccredited = "prybehav+303@gmail.com";
+    private String individual_US_noAccredited = "prybehav+303@gmail.com";
 
     @Title("Test Individual US no Accredited investment process for ACH method")
     @Severity(SeverityLevel.CRITICAL)
@@ -22,8 +22,8 @@ public class test_IndividualUSnoAccredited extends SetupClass {
     @Description("Login > check account type > make ACH investment")
     @Test
     public void Investment_ACH() throws Exception{
-        PagesURL URL = new PagesURL();
-        URL.LoginPage();
+        PagesURL url = new PagesURL();
+        url.LoginPage();
 
         Maintenance maintenance = new Maintenance();
         if (maintenance.MaintenancePageCheck()){
@@ -31,8 +31,8 @@ public class test_IndividualUSnoAccredited extends SetupClass {
             return;
         }
 
-        Login L = new Login();
-        L.LoginTest(IndividualUSNoAccredited);
+        Login l = new Login();
+        l.LoginTest(individual_US_noAccredited);
         LogUtil.log("Login");
 
         AccountType acc_type_obj = new AccountType();
@@ -49,8 +49,8 @@ public class test_IndividualUSnoAccredited extends SetupClass {
     @Description("Login > check account type > make Wire investment")
     @Test
     public void Investment_Wire() throws Exception{
-        PagesURL URL = new PagesURL();
-        URL.LoginPage();
+        PagesURL url = new PagesURL();
+        url.LoginPage();
 
         Maintenance maintenance = new Maintenance();
         if (maintenance.MaintenancePageCheck()){
@@ -58,8 +58,8 @@ public class test_IndividualUSnoAccredited extends SetupClass {
             return;
         }
 
-        Login L = new Login();
-        L.LoginTest(IndividualUSNoAccredited);
+        Login l = new Login();
+        l.LoginTest(individual_US_noAccredited);
         LogUtil.log("Login");
 
         AccountType acc_type_obj = new AccountType();
@@ -76,8 +76,8 @@ public class test_IndividualUSnoAccredited extends SetupClass {
     @Description("Login > check account type > make Bitcoin investment")
     @Test
     public void Investment_Bitcoin() throws Exception{
-        PagesURL URL = new PagesURL();
-        URL.LoginPage();
+        PagesURL url = new PagesURL();
+        url.LoginPage();
 
         Maintenance maintenance = new Maintenance();
         if (maintenance.MaintenancePageCheck()){
@@ -85,8 +85,8 @@ public class test_IndividualUSnoAccredited extends SetupClass {
             return;
         }
 
-        Login L = new Login();
-        L.LoginTest(IndividualUSNoAccredited);
+        Login l = new Login();
+        l.LoginTest(individual_US_noAccredited);
         LogUtil.log("Login");
 
         AccountType acc_type_obj = new AccountType();
@@ -103,8 +103,8 @@ public class test_IndividualUSnoAccredited extends SetupClass {
     @Description("Login > check account type > make Ethereum investment")
     @Test
     public void Investment_Ethereum() throws Exception{
-        PagesURL URL = new PagesURL();
-        URL.LoginPage();
+        PagesURL url = new PagesURL();
+        url.LoginPage();
 
         Maintenance maintenance = new Maintenance();
         if (maintenance.MaintenancePageCheck()){
@@ -112,8 +112,8 @@ public class test_IndividualUSnoAccredited extends SetupClass {
             return;
         }
 
-        Login L = new Login();
-        L.LoginTest(IndividualUSNoAccredited);
+        Login l = new Login();
+        l.LoginTest(individual_US_noAccredited);
         LogUtil.log("Login");
 
         AccountType acc_type_obj = new AccountType();

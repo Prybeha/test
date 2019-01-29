@@ -25,6 +25,10 @@ public class SetupClass {
         return driver;
     }
 
+    public static WebDriverWait GetDriverWait(){
+        return wait;
+    }
+
     @BeforeMethod
     public void setup (){
         System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDrivers\\chromedriver.exe");

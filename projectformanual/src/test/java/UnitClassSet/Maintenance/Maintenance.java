@@ -1,10 +1,8 @@
 package UnitClassSet.Maintenance;
 
-import SupportClasses.SetupClass.SetupClass;
 import UnitClassSet.Field;
-import org.openqa.selenium.By;
 
-public class Maintenance extends SetupClass {
+public class Maintenance {
     private Field field = new Field();
     public boolean MaintenancePageCheck(){
         if(field.ExistElementOnThePage("//*[@class='maintenance-text']",2)){

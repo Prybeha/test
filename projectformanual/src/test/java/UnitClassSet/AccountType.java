@@ -4,7 +4,7 @@ import SupportClasses.SetupClass.SetupClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class AccountType extends SetupClass {
+public class AccountType {
     //1 - Individual US
     //2 - Individual noUS
     //3 - Entity US
@@ -12,70 +12,70 @@ public class AccountType extends SetupClass {
     //5 - Individual no Accredited
 
     public int AccountTypeCheck() throws Exception{
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='login-block-authorized-container pull-right']")));
+        SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='login-block-authorized-container pull-right']")));
         Thread.sleep(500);
-        driver.findElement(By.xpath("//div[@class='login-block-authorized-container pull-right']")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://secure-seriesone.dynamo-ny.com/profile/edit']")));
+        SetupClass.GetDriver().findElement(By.xpath("//div[@class='login-block-authorized-container pull-right']")).click();
+        SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://secure-seriesone.dynamo-ny.com/profile/edit']")));
         Thread.sleep(300);
-        driver.findElement(By.xpath("//a[@href='https://secure-seriesone.dynamo-ny.com/profile/edit']")).click();
+        SetupClass.GetDriver().findElement(By.xpath("//a[@href='https://secure-seriesone.dynamo-ny.com/profile/edit']")).click();
 
-        if (driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText().equals("Individual") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("United States Citizen") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("Accredited")){
+        if (SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText().equals("Individual") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("United States Citizen") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("Accredited")){
             System.out.println("Individual US Accredited");
             return 1;
         }
-        else if (driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Individual") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("United States Citizen") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[4]/div[2]")).getText().equals("Accredited")){
+        else if (SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Individual") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("United States Citizen") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[4]/div[2]")).getText().equals("Accredited")){
             System.out.println("Individual US Accredited");
             return 1;
         }
-        else if (driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText().equals("Individual") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Non-US")){
+        else if (SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText().equals("Individual") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Non-US")){
             System.out.println("Individual no US");
             return 2;
         }
-        else if (driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Individual") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("Non-US")){
+        else if (SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Individual") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("Non-US")){
             System.out.println("Individual no US");
             return 2;
         }
-        else if (driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText().equals("Entity") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("United States Citizen")){
+        else if (SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText().equals("Entity") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("United States Citizen")){
             System.out.println("Entity US");
             return 3;
         }
-        else if (driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Entity") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("United States Citizen")){
+        else if (SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Entity") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("United States Citizen")){
             System.out.println("Entity US");
             return 3;
         }
-        else if (driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText().equals("Entity") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Non-US")){
+        else if (SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText().equals("Entity") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Non-US")){
             System.out.println("Entity no US");
             return 4;
         }
-        else if (driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Entity") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("Non-US")) {
+        else if (SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Entity") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("Non-US")) {
             System.out.println("Entity no US");
             return 4;
         }
-        else if (driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText().equals("Individual") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("United States Citizen") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("Non-Accredited")){
+        else if (SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText().equals("Individual") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("United States Citizen") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("Non-Accredited")){
             System.out.println("Individual US no Accredited");
             return 5;
         }
-        else if (driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Individual") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("United States Citizen") &&
-                driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[4]/div[2]")).getText().equals("Non-Accredited")){
+        else if (SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText().equals("Individual") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[3]/div[2]")).getText().equals("United States Citizen") &&
+                SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[4]/div[2]")).getText().equals("Non-Accredited")){
             System.out.println("Individual US no Accredited");
             return 5;
         }
         System.out.println("Error values: ");
-        System.out.println(driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText());
-        System.out.println(driver.findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText());
+        System.out.println(SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[1]/div[2]")).getText());
+        System.out.println(SetupClass.GetDriver().findElement(By.xpath("//*[@id=\"content\"]/section/div/div[2]/div[1]/div[2]/div[2]")).getText());
         return 0;
     }
 }

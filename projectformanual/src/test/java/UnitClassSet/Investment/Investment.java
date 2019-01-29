@@ -6,18 +6,19 @@ import UnitClassSet.Field;
 import UnitClassSet.PagesURL;
 import UnitClassSet.Switchers;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Investment extends SetupClass {
+public class Investment {
     private Field field = new Field();
     private Switchers switcher = new Switchers();
-    private PagesURL URL = new PagesURL();
+    private PagesURL url = new PagesURL();
     public void Investment(int user_type, String payment_method, String value_invest) throws Exception{
-        URL.DealPage();
+        url.DealPage();
 
-        WebElement LearnMoreButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://secure-seriesone.dynamo-ny.com/deal/pdp-qa']"))); // using xpath locator that find element by link
+        WebElement LearnMoreButton = SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://secure-seriesone.dynamo-ny.com/deal/pdp-qa']"))); // using xpath locator that find element by link
         Thread.sleep(500);
         LearnMoreButton.click();
 
@@ -27,13 +28,13 @@ public class Investment extends SetupClass {
             return;
         }
 
-        WebElement InvestButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Invest']"))); // using xpath locator that find element by text
+        WebElement InvestButton = SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Invest']"))); // using xpath locator that find element by text
         InvestButton.click();
 
         int current_step = 0;
         LogUtil.log("Investment starts");
         while (current_step != 4) {
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class='footer-logo']")));
+            SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class='footer-logo']")));
             Thread.sleep(1000);
 
             if(CheckInvestmentStep(current_step) == 1) {
@@ -67,11 +68,11 @@ public class Investment extends SetupClass {
                     System.out.println("Investment was successfully done.");
                 }
 
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='fw-link pull-right']")));
+                SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='fw-link pull-right']")));
                 Thread.sleep(200);
-                driver.findElement(By.xpath("//a[@class='fw-link pull-right']")).click();
+                SetupClass.GetDriver().findElement(By.xpath("//a[@class='fw-link pull-right']")).click();
 
-                driver.get("https://secure-seriesone.dynamo-ny.com/investments");
+                SetupClass.GetDriver().get("https://secure-seriesone.dynamo-ny.com/investments");
             }
             else{
                 System.out.println("Something goes wrong. You are go away from investment steps");
@@ -83,8 +84,8 @@ public class Investment extends SetupClass {
     private int CheckInvestmentStep(int prev_step) throws Exception{
         int wait_time = 5;
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class='footer-logo']")));
-        Thread.sleep(500);
+        SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class='footer-logo']")));
+        Thread.sleep(1000);
         if(prev_step == 0) {
             if (field.ExistElementOnThePage("//input[@id='investment_contact_agree']", wait_time)) { return 1; }
             else { return 0; }
@@ -124,17 +125,17 @@ public class Investment extends SetupClass {
             switcher.SwitcherManage("investment_contact_agree",
                     "//*[@id=\"firstPlace\"]/form/div[8]/div/div/div/label/div[1]/div/label[2]",true);
         }
-        WebElement next_button = driver.findElement(By.xpath("//button[@id='next']"));
+        WebElement next_button = SetupClass.GetDriver().findElement(By.xpath("//button[@id='next']"));
         next_button.click();
     }
 
-    private void SecondStep(String payment_method, String ValueForInvest) throws Exception{
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-option='ach']")));
+    private void SecondStep(String payment_method, String value_invest) throws Exception{
+        SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-option='ach']")));
         Thread.sleep(500);
 
         if (payment_method.equals("ACH")){
 
-            driver.findElement(By.xpath("//div[@data-option='ach']")).click();
+            SetupClass.GetDriver().findElement(By.xpath("//div[@data-option='ach']")).click();
 
             // data that required for ACH payment
             field.EnterValueIfAvailable("//input[@id='ach_nameOnAccount']","021000021");
@@ -142,54 +143,54 @@ public class Investment extends SetupClass {
             field.EnterValueIfAvailable("//input[@id='ach_accountNumber_first']","021000021");
             field.EnterValueIfAvailable("//input[@id='ach_accountNumber_second']","021000021");
 
-            driver.findElement(By.xpath("//label[@for='ach_checkType_0']")).click();// 'ach_checkType_1' if you want 'Business' type
-            driver.findElement(By.xpath("//label[@for='ach_accountType_0']")).click();// 'ach_accountType_1' if you want 'Savings' type
-            driver.findElement(By.xpath("//label[@for='ach_agree']")).click();
+            SetupClass.GetDriver().findElement(By.xpath("//label[@for='ach_checkType_0']")).click();// 'ach_checkType_1' if you want 'Business' type
+            SetupClass.GetDriver().findElement(By.xpath("//label[@for='ach_accountType_0']")).click();// 'ach_accountType_1' if you want 'Savings' type
+            SetupClass.GetDriver().findElement(By.xpath("//label[@for='ach_agree']")).click();
         }
         else if (payment_method.equals("Wire")){
-            driver.findElement(By.xpath("//div[@data-option='wire']")).click();
+            SetupClass.GetDriver().findElement(By.xpath("//div[@data-option='wire']")).click();
         }
         else if (payment_method.equals("Bitcoin")){
-            driver.findElement(By.xpath("//div[@data-option='bitcoin']")).click();
+            SetupClass.GetDriver().findElement(By.xpath("//div[@data-option='bitcoin']")).click();
             field.EnterValueIfAvailable("//input[@id='investment_fwWalletAddress']","2N21od10j2n18391n123");
         }
         else if (payment_method.equals("Ethereum")){
-            driver.findElement(By.xpath("//div[@data-option='ethereum']")).click();
+            SetupClass.GetDriver().findElement(By.xpath("//div[@data-option='ethereum']")).click();
             field.EnterValueIfAvailable("//input[@id='investment_fwWalletAddress']","0x12ni1890123oj123m1n1238819031ewd1");
         }
-        field.EnterValueIfAvailable("//input[@id='investment_fwAmount']",ValueForInvest);
-        driver.findElement(By.xpath("//button[@id='next']")).click();
+        field.EnterValueIfAvailable("//input[@id='investment_fwAmount']",value_invest);
+        SetupClass.GetDriver().findElement(By.xpath("//button[@id='next']")).click();
     }
 
     private void ThirdStep() throws Exception{
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
+        SetupClass.GetDriverWait().until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='Got it!']")));
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='onboarding-step-shade']")));
-        driver.findElement(By.xpath("//div[@class='onboarding-step-shade']")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='onboarding-step-shade']")));
-        driver.findElement(By.xpath("//div[@class='onboarding-step-shade']")).click();
+        SetupClass.GetDriverWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='Got it!']")));
+        SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='onboarding-step-shade']")));
+        SetupClass.GetDriver().findElement(By.xpath("//div[@class='onboarding-step-shade']")).click();
+        SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='onboarding-step-shade']")));
+        SetupClass.GetDriver().findElement(By.xpath("//div[@class='onboarding-step-shade']")).click();
 
-        driver.findElement(By.xpath("//div[@class='next-required-field down ember-view']")).click();
-        driver.findElement(By.xpath("//div[@class='signature-field ember-view']")).click();
-        driver.findElement(By.xpath("//button[@class='minimal green theme_link']")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='signature-pad-wrapper text']")));
-        driver.findElement(By.xpath("//input[@class='type-pad ember-text-field ember-view']")).click();
-        driver.findElement(By.xpath("//input[@class='type-pad ember-text-field ember-view']")).sendKeys("TestUser");
+        SetupClass.GetDriver().findElement(By.xpath("//div[@class='next-required-field down ember-view']")).click();
+        SetupClass.GetDriver().findElement(By.xpath("//div[@class='signature-field ember-view']")).click();
+        SetupClass.GetDriver().findElement(By.xpath("//button[@class='minimal green theme_link']")).click();
+        SetupClass.GetDriverWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='signature-pad-wrapper text']")));
+        SetupClass.GetDriver().findElement(By.xpath("//input[@class='type-pad ember-text-field ember-view']")).click();
+        SetupClass.GetDriver().findElement(By.xpath("//input[@class='type-pad ember-text-field ember-view']")).sendKeys("TestUser");
 
-        driver.findElement(By.xpath("//button[@class='rs-button is-primary ember-view']")).click();
+        SetupClass.GetDriver().findElement(By.xpath("//button[@class='rs-button is-primary ember-view']")).click();
         Thread.sleep(500);
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Submit Signature']")));
-        driver.findElement(By.xpath("//div[text()='Submit Signature']")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Submit']")));
-        driver.findElement(By.xpath("//div[text()='Submit']")).click();
+        SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Submit Signature']")));
+        SetupClass.GetDriver().findElement(By.xpath("//div[text()='Submit Signature']")).click();
+        SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Submit']")));
+        SetupClass.GetDriver().findElement(By.xpath("//div[text()='Submit']")).click();
 
         Thread.sleep(1000);
 
-        driver.switchTo().defaultContent();
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("next")));
-        driver.findElement(By.id("next")).click();
+        SetupClass.GetDriver().switchTo().defaultContent();
+        SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.id("next")));
+        SetupClass.GetDriver().findElement(By.id("next")).click();
 
 //        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
 //        if (field.ExistElementOnThePage("//*[@class='margin-bottom-25 investing-form-error alert alert-danger']",5)){

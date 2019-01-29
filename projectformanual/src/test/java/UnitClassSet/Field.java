@@ -7,12 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
-public class Field extends SetupClass {
+public class Field {
 
     public void EnterValue(String locator, String value){
-        driver.findElement(By.xpath(locator)).clear();
-        driver.findElement(By.xpath(locator)).click();
-        driver.findElement(By.xpath(locator)).sendKeys(value);
+        SetupClass.GetDriver().findElement(By.xpath(locator)).clear();
+        SetupClass.GetDriver().findElement(By.xpath(locator)).click();
+        SetupClass.GetDriver().findElement(By.xpath(locator)).sendKeys(value);
     }
 
     public void EnterValueIfAvailable(String locator, String value){
@@ -25,15 +25,15 @@ public class Field extends SetupClass {
 //        }
     }
 
-    public boolean ExistElementOnThePage(String locator, int WaitTime){
-        driver.manage().timeouts().implicitlyWait(WaitTime, TimeUnit.SECONDS);
+    public boolean ExistElementOnThePage(String locator, int wait_time){
+        SetupClass.GetDriver().manage().timeouts().implicitlyWait(wait_time, TimeUnit.SECONDS);
         try {
-            WebElement element = driver.findElement(By.xpath(locator));
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            WebElement element = SetupClass.GetDriver().findElement(By.xpath(locator));
+            SetupClass.GetDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             return true;
         }
         catch(NoSuchElementException ex) {
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            SetupClass.GetDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             return false;
         }
     }
