@@ -4,10 +4,16 @@ import SupportClasses.SetupClass.SetupClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.IHookCallBack;
+import org.testng.IHookable;
+import org.testng.ITestResult;
 import ru.yandex.qatools.allure.annotations.Attachment;
+import java.io.IOException;
 
-public final class ScreenShot extends SetupClass {
-    @Attachment(value = "Page screenshot {0}", type = "image/png")
-    public static String saveAllureScreenshot(String screenshot)
-    { return screenshot; }
+public class ScreenShot{
+
+    @Attachment
+    public String makeAttach() {
+        return "yeah, 2 is 2";
+    }
 }

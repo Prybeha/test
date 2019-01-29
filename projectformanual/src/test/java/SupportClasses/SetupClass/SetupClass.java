@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import ru.yandex.qatools.allure.annotations.Attachment;
 
 import java.io.File;
@@ -35,22 +36,22 @@ public class SetupClass {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-
-        File dir = new File("./target/screenshots/");
-        dir.mkdir();
     }
 
     @AfterMethod
     public void teardown(ITestResult result, Method test_name) throws IOException{
-        if (result.getStatus()==ITestResult.FAILURE ) {
-            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            String path = "./target/screenshots/" + test_name.getName();
-            FileHandler.copy(screenshot, new File(path));
+//        if (result.getStatus()==ITestResult.FAILURE ) {
+////            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+////            String path = "./target/allure-results/screenshots/" + test_name.getName();
+////            FileHandler.copy(screenshot, new File(path));
+////
+////            byte[] fileContent = Files.readAllBytes(screenshot.toPath());
+////
+////            ScreenShot.saveAllureScreenshot(fileContent);
+//        }
+        ScreenShot ss = new ScreenShot();
+        ss.makeAttach();
 
-            byte[] fileContent = Files.readAllBytes(screenshot.toPath());
-
-            ScreenShot.saveAllureScreenshot("gg");
-        }
         driver.quit();
     }
 }
