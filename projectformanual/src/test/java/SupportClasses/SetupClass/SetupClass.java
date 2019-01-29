@@ -1,33 +1,37 @@
 package SupportClasses.SetupClass;
 
-import SupportClasses.AllureFunc.ScreenShot;
+import SupportClasses.AllureFunc.ScreenShotUtil;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.remote.ScreenshotException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
-import ru.yandex.qatools.allure.annotations.Attachment;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.nio.file.Files;
 import java.util.concurrent.TimeUnit;
 
-@Listeners({ScreenShot.class})
+@Listeners({ScreenShotUtil.class})
 public class SetupClass {
     protected static WebDriver driver;
     protected static WebDriverWait wait;
 
     public static WebDriver GetDriver(){
         return driver;
+    }
+
+    @BeforeSuite
+    private void CreateFolderForScreenshots(){
+        File dir = new File("./target/allure-results/screenshots/");
+        dir.mkdir();
     }
 
     @BeforeMethod
@@ -42,17 +46,11 @@ public class SetupClass {
 
     @AfterMethod
     public void teardown(ITestResult result, Method test_name) throws IOException{
-//        if (result.getStatus()==ITestResult.FAILURE ) {
-////            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-////            String path = "./target/allure-results/screenshots/" + test_name.getName();
-////            FileHandler.copy(screenshot, new File(path));
-////
-////            byte[] fileContent = Files.readAllBytes(screenshot.toPath());
-////
-////            ScreenShot.saveAllureScreenshot(fileContent);
-
-//        }
-
+        if (result.getStatus()==ITestResult.FAILURE ) {
+            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            String path = "./target/allure-results/screenshots/" + test_name.getName();
+            FileHandler.copy(screenshot, new File(path));
+        }
         driver.quit();
     }
 }

@@ -1,7 +1,6 @@
 package UnitClassSet.Investment;
 
 import SupportClasses.AllureFunc.LogUtil;
-import SupportClasses.AllureFunc.ScreenShot;
 import SupportClasses.SetupClass.SetupClass;
 import UnitClassSet.AccountType;
 import UnitClassSet.Investment.Investment;
