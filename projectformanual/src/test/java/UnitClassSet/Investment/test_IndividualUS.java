@@ -7,6 +7,7 @@ import UnitClassSet.Investment.Investment;
 import UnitClassSet.Login.Login;
 import UnitClassSet.Maintenance.Maintenance;
 import UnitClassSet.PagesURL;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 import ru.yandex.qatools.allure.annotations.Features;
@@ -25,6 +26,7 @@ public class test_IndividualUS extends SetupClass{
     public void Investment_ACH() throws Exception{
         PagesURL URL = new PagesURL();
         URL.LoginPage();
+        Assert.assertEquals(1,2);
 
         Maintenance maintenance = new Maintenance();
         if (maintenance.MaintenancePageCheck()){
