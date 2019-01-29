@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="3" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Sone tests" duration-ms="12908" started-at="2019-01-29T15:51:46Z" finished-at="2019-01-29T15:51:59Z">
+  <suite name="Sone tests" duration-ms="14320" started-at="2019-01-29T15:57:06Z" finished-at="2019-01-29T15:57:21Z">
     <groups>
     </groups>
-    <test name="Investments" duration-ms="12908" started-at="2019-01-29T15:51:46Z" finished-at="2019-01-29T15:51:59Z">
+    <test name="Investments" duration-ms="14320" started-at="2019-01-29T15:57:06Z" finished-at="2019-01-29T15:57:21Z">
       <class name="UnitClassSet.Investment.test_IndividualUS">
-        <test-method status="PASS" signature="setup()[pri:0, instance:UnitClassSet.Investment.test_IndividualUS@3c74aa0d]" name="setup" is-config="true" duration-ms="8660" started-at="2019-01-29T15:51:47Z" finished-at="2019-01-29T15:51:55Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:UnitClassSet.Investment.test_IndividualUS@73d60e76]" name="setup" is-config="true" duration-ms="8444" started-at="2019-01-29T15:57:07Z" finished-at="2019-01-29T15:57:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="Investment_ACH()[pri:0, instance:UnitClassSet.Investment.test_IndividualUS@3c74aa0d]" name="Investment_ACH" duration-ms="3233" started-at="2019-01-29T15:51:55Z" finished-at="2019-01-29T15:51:59Z">
+        <test-method status="FAIL" signature="Investment_ACH()[pri:0, instance:UnitClassSet.Investment.test_IndividualUS@73d60e76]" name="Investment_ACH" duration-ms="3591" started-at="2019-01-29T15:57:15Z" finished-at="2019-01-29T15:57:19Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [2] but found [1]]]>
@@ -44,11 +44,11 @@ at java.lang.Thread.run(Thread.java:748)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Investment_ACH -->
-        <test-method status="PASS" signature="teardown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:UnitClassSet.Investment.test_IndividualUS@3c74aa0d]" name="teardown" is-config="true" duration-ms="784" started-at="2019-01-29T15:51:59Z" finished-at="2019-01-29T15:51:59Z">
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:UnitClassSet.Investment.test_IndividualUS@73d60e76]" name="teardown" is-config="true" duration-ms="859" started-at="2019-01-29T15:57:20Z" finished-at="2019-01-29T15:57:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Investment_ACH status=FAILURE method=test_IndividualUS.Investment_ACH()[pri:0, instance:UnitClassSet.Investment.test_IndividualUS@3c74aa0d] output={null}]]]>
+                <![CDATA[[TestResult name=Investment_ACH status=FAILURE method=test_IndividualUS.Investment_ACH()[pri:0, instance:UnitClassSet.Investment.test_IndividualUS@73d60e76] output={null}]]]>
               </value>
             </param>
             <param index="1">

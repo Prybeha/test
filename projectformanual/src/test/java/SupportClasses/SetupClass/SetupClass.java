@@ -12,6 +12,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import ru.yandex.qatools.allure.annotations.Attachment;
 
 import java.io.File;
@@ -20,9 +21,10 @@ import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.util.concurrent.TimeUnit;
 
+@Listeners({ScreenShot.class})
 public class SetupClass {
-    public static WebDriver driver;
-    public static WebDriverWait wait;
+    protected static WebDriver driver;
+    protected static WebDriverWait wait;
 
     public static WebDriver GetDriver(){
         return driver;
