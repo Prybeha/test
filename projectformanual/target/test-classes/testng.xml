@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Sone tests">
+    <test thread-count="1" verbose="1" name="Investments" annotations="JDK" parallel="classes">
+        <classes>
+            <class name="UnitClassSet.Investment.test_IndividualUS">
+                <methods>
+                    <include name="Investment_ACH"/>
+                    <!--<include name="Investment_Wire"/>-->
+                    <!--<include name="Investment_Bitcoin"/>-->
+                    <!--&lt;!&ndash;<include name="Investment_Ethereum"/>&ndash;&gt;-->
+                </methods>
+            </class>
+            <!--<class name="UnitClassSet.Investment.test_IndividualnoUS">-->
+                <!--<methods>-->
+                    <!--&lt;!&ndash;<include name="Investment_ACH"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Wire"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Bitcoin"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Ethereum"/>&ndash;&gt;-->
+                <!--</methods>-->
+            <!--</class>-->
+            <!--<class name="UnitClassSet.Investment.test_IndividualUSnoAccredited">-->
+                <!--<methods>-->
+                    <!--&lt;!&ndash;<include name="Investment_ACH"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Wire"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Bitcoin"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Ethereum"/>&ndash;&gt;-->
+                <!--</methods>-->
+            <!--</class>-->
+            <!--<class name="UnitClassSet.Investment.test_EntityUS">-->
+                <!--<methods>-->
+                    <!--&lt;!&ndash;<include name="Investment_ACH"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Wire"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Bitcoin"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Ethereum"/>&ndash;&gt;-->
+                <!--</methods>-->
+            <!--</class>-->
+            <!--<class name="UnitClassSet.Investment.test_EntitynoUS">-->
+                <!--<methods>-->
+                    <!--&lt;!&ndash;<include name="Investment_ACH"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Wire"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Bitcoin"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="Investment_Ethereum"/>&ndash;&gt;-->
+                <!--</methods>-->
+            <!--</class>-->
+        </classes>
+    </test>
+</suite>

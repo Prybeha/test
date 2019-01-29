@@ -24,7 +24,7 @@ public class SetupClass {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
-    public WebDriver GetDriver(){
+    public static WebDriver GetDriver(){
         return driver;
     }
 
@@ -40,7 +40,7 @@ public class SetupClass {
 
     @AfterMethod
     public void teardown(ITestResult result, Method test_name) throws IOException{
-        if (result.getStatus()==ITestResult.FAILURE ) {
+//        if (result.getStatus()==ITestResult.FAILURE ) {
 ////            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 ////            String path = "./target/allure-results/screenshots/" + test_name.getName();
 ////            FileHandler.copy(screenshot, new File(path));
@@ -49,9 +49,7 @@ public class SetupClass {
 ////
 ////            ScreenShot.saveAllureScreenshot(fileContent);
 
-            ScreenShot ss = new ScreenShot();
-            ss.makeAttach();
-        }
+//        }
 
         driver.quit();
     }
