@@ -43,11 +43,11 @@ public class SetupClass {
     @AfterMethod
     public void teardown(ITestResult result, Method test_name) throws IOException{
         if (result.getStatus()==ITestResult.FAILURE) {
-            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            String path = "./target/screenshots/" + test_name.getName();
-            FileHandler.copy(screenshot, new File(path));
-
-            byte[] fileContent = Files.readAllBytes(screenshot.toPath());
+//            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//            String path = "./target/screenshots/" + test_name.getName();
+//            FileHandler.copy(screenshot, new File(path));
+//
+//            byte[] fileContent = Files.readAllBytes(screenshot.toPath());
 
             ScreenShot ss = new ScreenShot();
             ss.saveAllureScreenshot();
