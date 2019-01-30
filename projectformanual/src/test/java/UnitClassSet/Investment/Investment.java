@@ -35,6 +35,7 @@ public class Investment {
         LogUtil.log("Investment starts");
         while (current_step != 4) {
             SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class='footer-logo']")));
+            SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.id("next")));
             Thread.sleep(1000);
 
             if(CheckInvestmentStep(current_step) == 1) {
@@ -79,7 +80,6 @@ public class Investment {
             else{
                 System.out.println("Something goes wrong. You are go away from investment steps");
             }
-            //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://seriesone.dynamo-ny.com']")));
         }
     }
 
@@ -185,6 +185,7 @@ public class Investment {
 
         SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Submit Signature']")));
         SetupClass.GetDriver().findElement(By.xpath("//div[text()='Submit Signature']")).click();
+        Thread.sleep(100);
         SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Submit']")));
         SetupClass.GetDriver().findElement(By.xpath("//div[text()='Submit']")).click();
 

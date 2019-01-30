@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c09ba75-c11e-4fc2-bbfe-ae92e986a408" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SupportClasses/SetupClass/SetupClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SupportClasses/SetupClass/SetupClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UnitClassSet/Investment/Investment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UnitClassSet/Investment/Investment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/categories.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c3305b3f-0c9e-474e-86ac-fcbc5a68a27d-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/categories.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2019-01-29T21-21-57_017.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SupportClasses/SetupClass/SetupClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SupportClasses/SetupClass/SetupClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/UnitClassSet/Investment/Investment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/UnitClassSet/Investment/Investment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/UnitClassSet/Switchers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/UnitClassSet/Switchers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/categories.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/UnitClassSet/Investment/Investment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="76" column="17" lean-forward="true" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+            <state relative-caret-position="391">
+              <caret line="191" column="27" lean-forward="true" selection-start-line="191" selection-start-column="27" selection-end-line="191" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/SetupClass/SetupClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="36" column="73" lean-forward="true" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
+            <state relative-caret-position="712">
+              <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,19 +60,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/categories.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/AllureFunc/ScreenShotUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="476">
+              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -205,23 +203,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SupportClasses" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectformanual" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectformanual" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SupportClasses" type="462c0819:PsiDirectoryNode" />
-              <item name="SetupClass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectformanual" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectformanual" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="UnitClassSet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -351,7 +332,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -361,7 +342,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Structure" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.25324675" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.25324675" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -586,6 +567,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/categories.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/allure-results/c3305b3f-0c9e-474e-86ac-fcbc5a68a27d-attachment.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/allure-results/Investment_ACH">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/UnitClassSet/Login/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -598,25 +592,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/AllureFunc/ScreenShotUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="476">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/categories.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/SetupClass/SetupClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="36" column="73" lean-forward="true" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
+        <state relative-caret-position="712">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -625,8 +612,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/UnitClassSet/Investment/Investment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="76" column="17" lean-forward="true" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+        <state relative-caret-position="391">
+          <caret line="191" column="27" lean-forward="true" selection-start-line="191" selection-start-column="27" selection-end-line="191" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

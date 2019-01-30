@@ -18,8 +18,8 @@ import java.util.concurrent.TimeUnit;
 
 @Listeners({ScreenShotUtil.class})
 public class SetupClass {
-    protected static WebDriver driver;
-    protected static WebDriverWait wait;
+    private static WebDriver driver;
+    private static WebDriverWait wait;
 
     public static WebDriver GetDriver(){
         return driver;
