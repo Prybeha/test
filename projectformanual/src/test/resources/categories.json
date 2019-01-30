@@ -8,9 +8,9 @@
   "matchedStatuses": ["broken"]
 },
 {
-  "name": "Vovas test exception;",
+  "name": "Page loading to long",
   "matchedStatuses": ["broken"],
-  "traceRegex": ".*NewException.*"
+  "messageRegex": ".*Timed out receiving message from renderer.*"
 },
 {
   "name": "Assertion problems;",

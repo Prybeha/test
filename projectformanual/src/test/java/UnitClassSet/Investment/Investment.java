@@ -72,7 +72,9 @@ public class Investment {
                 Thread.sleep(200);
                 SetupClass.GetDriver().findElement(By.xpath("//a[@class='fw-link pull-right']")).click();
 
-                SetupClass.GetDriver().get("https://secure-seriesone.dynamo-ny.com/investments");
+                if (!SetupClass.GetDriver().getCurrentUrl().equals("https://secure-seriesone.dynamo-ny.com/investments")) {
+                    SetupClass.GetDriver().get("https://secure-seriesone.dynamo-ny.com/investments");
+                }
             }
             else{
                 System.out.println("Something goes wrong. You are go away from investment steps");
