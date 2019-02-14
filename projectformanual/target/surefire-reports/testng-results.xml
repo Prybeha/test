@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Sone tests" duration-ms="10727" started-at="2019-02-14T13:08:42Z" finished-at="2019-02-14T13:08:52Z">
+  <suite name="Sone tests" duration-ms="9735" started-at="2019-02-14T13:09:57Z" finished-at="2019-02-14T13:10:07Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="10727" started-at="2019-02-14T13:08:42Z" finished-at="2019-02-14T13:08:52Z">
+    <test name="Test" duration-ms="9735" started-at="2019-02-14T13:09:57Z" finished-at="2019-02-14T13:10:07Z">
       <class name="TestClass">
-        <test-method status="PASS" signature="setup()[pri:0, instance:TestClass@3c3c4a71]" name="setup" is-config="true" duration-ms="4868" started-at="2019-02-14T13:08:42Z" finished-at="2019-02-14T13:08:47Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestClass@3c3c4a71]" name="setup" is-config="true" duration-ms="4607" started-at="2019-02-14T13:09:57Z" finished-at="2019-02-14T13:10:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Secondtest()[pri:0, instance:TestClass@3c3c4a71]" name="Secondtest" duration-ms="5172" started-at="2019-02-14T13:08:47Z" finished-at="2019-02-14T13:08:52Z">
+        <test-method status="PASS" signature="Secondtest()[pri:0, instance:TestClass@3c3c4a71]" name="Secondtest" duration-ms="4425" started-at="2019-02-14T13:10:02Z" finished-at="2019-02-14T13:10:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Secondtest -->
-        <test-method status="PASS" signature="teardown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:TestClass@3c3c4a71]" name="teardown" is-config="true" duration-ms="616" started-at="2019-02-14T13:08:52Z" finished-at="2019-02-14T13:08:52Z">
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:TestClass@3c3c4a71]" name="teardown" is-config="true" duration-ms="646" started-at="2019-02-14T13:10:06Z" finished-at="2019-02-14T13:10:07Z">
           <params>
             <param index="0">
               <value>
