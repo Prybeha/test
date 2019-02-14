@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Sone tests" duration-ms="9682" started-at="2019-02-14T12:27:20Z" finished-at="2019-02-14T12:27:30Z">
+  <suite name="Sone tests" duration-ms="10038" started-at="2019-02-14T12:29:10Z" finished-at="2019-02-14T12:29:20Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="9682" started-at="2019-02-14T12:27:20Z" finished-at="2019-02-14T12:27:30Z">
+    <test name="Test" duration-ms="10038" started-at="2019-02-14T12:29:10Z" finished-at="2019-02-14T12:29:20Z">
       <class name="TestClass">
-        <test-method status="PASS" signature="setup()[pri:0, instance:TestClass@ccf91df]" name="setup" is-config="true" duration-ms="4926" started-at="2019-02-14T12:27:20Z" finished-at="2019-02-14T12:27:25Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestClass@58fef7f7]" name="setup" is-config="true" duration-ms="4966" started-at="2019-02-14T12:29:10Z" finished-at="2019-02-14T12:29:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Secondtest()[pri:0, instance:TestClass@ccf91df]" name="Secondtest" duration-ms="4073" started-at="2019-02-14T12:27:25Z" finished-at="2019-02-14T12:27:29Z">
+        <test-method status="PASS" signature="Secondtest()[pri:0, instance:TestClass@58fef7f7]" name="Secondtest" duration-ms="4359" started-at="2019-02-14T12:29:15Z" finished-at="2019-02-14T12:29:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Secondtest -->
-        <test-method status="PASS" signature="teardown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:TestClass@ccf91df]" name="teardown" is-config="true" duration-ms="628" started-at="2019-02-14T12:27:29Z" finished-at="2019-02-14T12:27:29Z">
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:TestClass@58fef7f7]" name="teardown" is-config="true" duration-ms="653" started-at="2019-02-14T12:29:19Z" finished-at="2019-02-14T12:29:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Secondtest status=SUCCESS method=TestClass.Secondtest()[pri:0, instance:TestClass@ccf91df] output={null}]]]>
+                <![CDATA[[TestResult name=Secondtest status=SUCCESS method=TestClass.Secondtest()[pri:0, instance:TestClass@58fef7f7] output={null}]]]>
               </value>
             </param>
             <param index="1">
