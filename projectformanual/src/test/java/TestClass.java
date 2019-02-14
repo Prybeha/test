@@ -23,7 +23,7 @@ public class TestClass extends SetupClass {
     @Test
     public void Secondtest() throws Exception{
         System.out.println("test");
-        Scanner reader = new Scanner(new File("src/test/java//id.txt"));
+        Scanner reader = new Scanner(new File("src/test/java/id.txt"));
         int id = reader.nextInt(); // id > unique number for email, that reads from the file and writes bigger on one.
 
         id++;
