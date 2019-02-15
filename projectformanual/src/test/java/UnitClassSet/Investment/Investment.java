@@ -31,6 +31,17 @@ public class Investment {
         WebElement InvestButton = SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Invest']"))); // using xpath locator that find element by text
         InvestButton.click();
 
+        if (field.ExistElementOnThePage("//div[@class='bootbox modal fade modal-edit-profile popup-agreement in']",2)){
+            if (!SetupClass.GetDriver().findElement(By.xpath("//input[@name='firstAgreement']")).isSelected()) {
+                SetupClass.GetDriver().findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div/label/div/div/label[2]")).click();
+            }
+            if (!SetupClass.GetDriver().findElement(By.xpath("//input[@name='secondAgreement']")).isSelected()) {
+                SetupClass.GetDriver().findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[2]/div/label/div/div/label[2]")).click();
+            }
+            Thread.sleep(200);
+            SetupClass.GetDriver().findElement(By.xpath("//button[text()='Confirm']")).click();
+        }
+
         int current_step = 0;
         LogUtil.log("Investment starts");
         while (current_step != 4) {
@@ -58,6 +69,7 @@ public class Investment {
                 System.out.println("Third step");
                 LogUtil.log("Third step");
                 ThirdStep();
+                Thread.sleep(3000);
             }
             else if(CheckInvestmentStep(current_step) == 4){
                 current_step = 4;
@@ -113,7 +125,7 @@ public class Investment {
         return 0;
     }
 
-    private void FirstStep(int user_type){
+    private void FirstStep(int user_type) throws Exception{
         // add some changes to your data
 
         field.EnterValueIfAvailable("//input[@id='investment_contact_fwSSN']","123123123");
@@ -185,7 +197,7 @@ public class Investment {
 
         SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Submit Signature']")));
         SetupClass.GetDriver().findElement(By.xpath("//div[text()='Submit Signature']")).click();
-        Thread.sleep(100);
+        Thread.sleep(300);
         SetupClass.GetDriverWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Submit']")));
         SetupClass.GetDriver().findElement(By.xpath("//div[text()='Submit']")).click();
 

@@ -1,5 +1,5 @@
-# Created at 2019-02-14T12:18:15.798
-Boot Manifest-JAR contains absolute paths in classpath D:\Share\vprybeha\Programs\git_repository\test\projectformanual\target\test-classes
+# Created at 2019-02-14T18:12:29.780
+Boot Manifest-JAR contains absolute paths in classpath D:\Share\vprybeha\Programs\git_repository\s1_tests\projectformanual\target\test-classes
 java.lang.IllegalArgumentException: 'other' has different root
 	at sun.nio.fs.WindowsPath.relativize(WindowsPath.java:392)
 	at sun.nio.fs.WindowsPath.relativize(WindowsPath.java:44)
@@ -38,8 +38,8 @@ java.lang.IllegalArgumentException: 'other' has different root
 	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
 
 
-# Created at 2019-02-14T12:18:15.806
-Boot Manifest-JAR contains absolute paths in classpath D:\Share\vprybeha\Programs\git_repository\test\projectformanual\target\classes
+# Created at 2019-02-14T18:12:29.788
+Boot Manifest-JAR contains absolute paths in classpath D:\Share\vprybeha\Programs\git_repository\s1_tests\projectformanual\target\classes
 java.lang.IllegalArgumentException: 'other' has different root
 	at sun.nio.fs.WindowsPath.relativize(WindowsPath.java:392)
 	at sun.nio.fs.WindowsPath.relativize(WindowsPath.java:44)
