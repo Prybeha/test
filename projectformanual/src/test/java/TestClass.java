@@ -16,6 +16,9 @@ public class TestClass extends SetupClass {
         int id = reader.nextInt(); // id > unique number for email, that reads from the file and writes bigger on one.
         id++;
         String str = Integer.toString(id);
+
+        System.out.println("new feature that was realized.");
+
         BufferedWriter writer = new BufferedWriter(new FileWriter("src/test/java/id.txt"));
         writer.write(str);
         writer.close();
