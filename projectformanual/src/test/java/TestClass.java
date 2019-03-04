@@ -1,4 +1,3 @@
-import DB.db_registration_first_step;
 import SupportClasses.SetupClass.SetupClass;
 import SupportClasses.TestLink.TestLinkResult;
 import org.testng.annotations.Test;
